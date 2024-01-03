@@ -1,0 +1,44 @@
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+#sellerForm {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#sellerForm input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+#sellerForm button {
+    margin-top: 10px;
+    padding: 10px 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    background-color: #fafafa;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+ul li button {
+    float: right;
+}
