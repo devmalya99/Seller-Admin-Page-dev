@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Admin Page</title>
+</head>
+<body>
+    
+<div class="container">
+    <h1>Seller Admin Page</h1>
+    <form id="sellerForm">
+    <div class="mainContent" id="addProducts">
+        Selling Price:<input type="number" class="price" id="price">
+        Product Name:<input type="text" class="name" id="name">
+        Product Category:
+        <label for="category">Select product category</label>
+        <select name="colors" id="category">
+          <option value="Electronics">Electronics</option>
+          <option value="Food">Food</option>
+          <option value="Skin Care">Skin Care</option>
+        </select>
+        <button id="addBtn">Add Product</button>
+    </div>
+</form>
+
+<div id="productList">
+    <h2>My Product List</h2>
+    <hr>
+    <h3>Electronics</h3>
+    <ul id="electronicsList"></ul>
+    <h3>Food Items</h3>
+    <ul id="foodList"></ul>
+    <h3>SkinCare</h3>
+    <ul id="skinCareList"></ul>
+
+</div>
+
+
+</div>
+
+
+
+</body>
+<script src="./index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.3/axios.min.js" 
+integrity="sha512-JWQFV6OCC2o2x8x46YrEeFEQtzoNV++r9im8O8stv91YwHNykzIS2TbvAlFdeH0GVlpnyd79W0ZGmffcRi++Bw==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>
