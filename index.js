@@ -40,7 +40,7 @@ function showProductDetails(id, price, name, category) {
 
     delBtn.addEventListener('click', async function() {
         try {
-            const res = await axios.delete(`https://crudcrud.com/api/0990ae8283064baf805de83c6319a55a/adminPage/${li.id}`);
+            const res = await axios.delete(`https://crudcrud.com/api/305e202ae8f0402c8fb77e2003b59579/adminPage/${li.id}`);
             li.remove();
         } catch(err) {
             console.log(err);
@@ -66,7 +66,7 @@ function showProductDetails(id, price, name, category) {
 
 async function saveToCrud(productDetails) {
     try {
-        const res = await axios.post("https://crudcrud.com/api/0990ae8283064baf805de83c6319a55a/adminPage", productDetails);
+        const res = await axios.post("https://crudcrud.com/api/305e202ae8f0402c8fb77e2003b59579/adminPage", productDetails);
         showProductDetails(res.data._id, productDetails.price, productDetails.name, productDetails.category);
     } catch(err) {
         console.log(err);
@@ -78,7 +78,7 @@ async function saveToCrud(productDetails) {
 async function loadSavedData() 
 {
   try{
-    const res=await axios.get("https://crudcrud.com/api/0990ae8283064baf805de83c6319a55a/adminPage")
+    const res=await axios.get("https://crudcrud.com/api/305e202ae8f0402c8fb77e2003b59579/adminPage")
      res.data.forEach((product) => {
             showProductDetails(product._id, product.price, product.name, product.category);
         });
