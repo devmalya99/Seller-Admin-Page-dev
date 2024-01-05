@@ -2,6 +2,7 @@
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
     border: #161414 solid 2px; /* changed to a softer border color */
     border-radius: 5px;
     box-shadow: 0 0 50px #c0b3e2;
