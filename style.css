@@ -2,13 +2,14 @@
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
-    border: #c9c9c9 solid 1px; /* changed to a softer border color */
+    border: #161414 solid 2px; /* changed to a softer border color */
     border-radius: 5px;
+    box-shadow: 0 0 50px #c0b3e2;
     box-sizing: border-box; /* added to manage box padding/margin */
 }
 
 h1, h2, h3 {
-    color: #334; /* a slightly darker text color for better contrast */
+    color: rgb(16, 16, 128); /* a slightly darker text color for better contrast */
 }
 
 #sellerForm {
@@ -22,7 +23,7 @@ h1, h2, h3 {
 #sellerForm input {
     margin-bottom: 20px;
     padding: 10px;
-    width: 100%;
+    width: 90%;
     border-radius: 5px; /* added to match form style */
 }
 
