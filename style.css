@@ -2,14 +2,17 @@
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
+    border: #c9c9c9 solid 1px; /* changed to a softer border color */
+    border-radius: 5px;
+    box-sizing: border-box; /* added to manage box padding/margin */
 }
 
 h1, h2, h3 {
-    color: #333;
+    color: #334; /* a slightly darker text color for better contrast */
 }
 
 #sellerForm {
-    background-color: #f9f9f9;
+    background-color: #be8dec; /* softer color */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -17,28 +20,60 @@ h1, h2, h3 {
 }
 
 #sellerForm input {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     width: 100%;
+    border-radius: 5px; /* added to match form style */
 }
 
 #sellerForm button {
     margin-top: 10px;
     padding: 10px 15px;
+    background-color: #4853e7; /* matched to container */
+    color: #fff; /* contrast for readable text */
+    border: none; /* removed default border */
+    transition: background-color 0.3s ease; /* transition for smooth hover effect */
+}
+
+#sellerForm button:hover {
+    background-color: #200a5c; /* darkened on hover */
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: decimal-leading-zero;
 }
 
 ul li {
-    background-color: #fafafa;
+    background-color: #c0b3e2; /* lighter background */
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 ul li button {
     float: right;
+    background-color: #2c62d6; /* match other buttons */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+ul li button:hover {
+    background-color: #102a70; /* darken on hover */
+}
+
+#addBtn {
+    border-radius: 7px;
+}
+
+#category {
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.del {
+    padding: 5px;
+    margin: 5px;
 }
