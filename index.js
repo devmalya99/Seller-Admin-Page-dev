@@ -38,12 +38,13 @@ function showProductDetails(id, price, name, category) {
     delBtn.innerHTML='Delete';
     delBtn.setAttribute('class','del')
 
-    delBtn.addEventListener('click', function() {
-        axios.delete(`https://crudcrud.com/api/0990ae8283064baf805de83c6319a55a/adminPage/${li.id}`)
-        .then((res) => {
+    delBtn.addEventListener('click', async function() {
+        try {
+            const res = await axios.delete(`https://crudcrud.com/api/0990ae8283064baf805de83c6319a55a/adminPage/${li.id}`);
             li.remove();
-        })
-        .catch(err => console.log(err));
+        } catch(err) {
+            console.log(err);
+        }
     });
 
     li.appendChild(delBtn);
@@ -63,25 +64,30 @@ function showProductDetails(id, price, name, category) {
     }
 }
 
-function saveToCrud(productDetails) {
-    axios.post("https://crudcrud.com/api/0990ae8283064baf805de83c6319a55a/adminPage", productDetails)
-    .then((res) => {
-        showProductDetails(res.data._id, productDetails.price, productDetails.name, productDetails.category)
-    })
-    .catch((err) => {
+async function saveToCrud(productDetails) {
+    try {
+        const res = await axios.post("https://crudcrud.com/api/0990ae8283064baf805de83c6319a55a/adminPage", productDetails);
+        showProductDetails(res.data._id, productDetails.price, productDetails.name, productDetails.category);
+    } catch(err) {
         console.log(err);
-    });
-    sellerForm.reset();
+    } finally {
+        sellerForm.reset();
+    }
 }
 
-function loadSavedData() {
-    axios.get("https://crudcrud.com/api/0990ae8283064baf805de83c6319a55a/adminPage")
-    .then((res) => {
-        res.data.forEach((product) => {
+async function loadSavedData() 
+{
+  try{
+    const res=await axios.get("https://crudcrud.com/api/0990ae8283064baf805de83c6319a55a/adminPage")
+     res.data.forEach((product) => {
             showProductDetails(product._id, product.price, product.name, product.category);
         });
-    })
-    .catch(err => console.log(err));
+    
+  }
+  catch(err)
+  {
+   console.log(err);
+  }
 }
 
 window.addEventListener("load", function() {
